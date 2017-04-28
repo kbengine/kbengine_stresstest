@@ -67,7 +67,7 @@ class Gate(KBEngine.Entity, GameObject):
 			spaceData = d_spaces.datas.get(gotoSpaceUType)
 			entityEntering.teleportSpace(gotoSpaceUType, spaceData["spawnPos"], tuple(self.direction), {})
 		elif self.uid == 40001005: # goto center
-			if "Bot" in entityEntering.name:
+			if "bot_" in entityEntering.name:
 				return
 
 			gotoSpaceUType = 1

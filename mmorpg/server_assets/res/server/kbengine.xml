@@ -78,6 +78,12 @@
 	</machine>
 	
 	<bots>
+		<!-- loginapp地址 
+			（loginapp address)
+		-->
+		<host> localhost </host>										<!-- Type: String -->
+		<port> 20013 </port>											<!-- Type: Integer -->
+		
 		<!-- 默认启动进程后自动添加这么多个机器人 
 			(After starting the process, automatically add some robots)
 			totalCount	： 添加总数量			(Add the total-number)
