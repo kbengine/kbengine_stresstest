@@ -11,7 +11,7 @@
 		<debug_type> 0 </debug_type>
 	</trace_packet>
 	
-	<app_publish> 0 </app_publish>
+	<app_publish> 1 </app_publish>
 	
 	<!-- defined => kbe/res/server/kbengine_defs.xml -->
 	<dbmgr>
