@@ -57,6 +57,8 @@ class Gate(KBEngine.Entity, GameObject):
 
 		if self.uid == 40001003: # cell-scene -> cell-scene
 			spaceData = d_spaces.datas.get(entityEntering.spaceUType)
+			if spaceData is None:
+				print("err000-------------------%s---%d" % (entityEntering.className, entityEntering.spaceUType))
 			entityEntering.teleport(None, spaceData["spawnPos"], tuple(self.direction))
 		elif self.uid == 40001004: # center->cell-scene
 			gotoSpaceUType = 1000 + self.mapID
@@ -80,6 +82,8 @@ class Gate(KBEngine.Entity, GameObject):
 				gotoSpaceUType = entityEntering.lastSpaceUType
 			
 			spaceData = d_spaces.datas.get(gotoSpaceUType)
+			if spaceData is None:
+				print("err111-------------------%s---%d" % (entityEntering.className, gotoSpaceUType))
 			entityEntering.teleportSpace(gotoSpaceUType, spaceData["spawnPos"], tuple(self.direction), {})
 
 	def onLeaveTrap(self, entityLeaving, range_xz, range_y, controllerID, userarg):
