@@ -40,6 +40,7 @@ class Avatar(KBEngine.Entity,
 		
 		if self.spaceUType == 1000:
 			self.spaceUType = self.getCurrSpace().spaceUType
+			self.topSpeed = 0
 
 	def isPlayer(self):
 		"""
