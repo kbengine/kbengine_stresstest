@@ -11,7 +11,16 @@
 		<debug_type> 0 </debug_type>
 	</trace_packet>
 	
-	<app_publish> 10 </app_publish>
+	<publish>
+		<!-- 发布状态, 可在脚本中获取该值。 KBEngine.publish()
+			(apps released state, This value can be obtained in the script. KBEngine.publish())
+			Type: Integer8
+			0 : debug
+			1 : release
+			其他自定义(Other custom)
+		-->
+		<state> 10 </state>
+	</publish>
 	
 	<!-- defined => kbe/res/server/kbengine_defs.xml -->
 	<dbmgr>
