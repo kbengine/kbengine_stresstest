@@ -9,4 +9,23 @@ echo KBE_RES_PATH = \"${KBE_RES_PATH}\"
 echo KBE_BIN_PATH = \"${KBE_BIN_PATH}\"
 
 $KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
+$KBE_BIN_PATH/bots&
 
