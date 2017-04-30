@@ -72,6 +72,12 @@
 			（Automatic backup time period(secs)） 
 		-->
 		<backupPeriod> 1800 </backupPeriod>							<!-- Type: Float -->
+		
+		<!-- 暴露给客户端的端口范围
+			（Exposed to the client port range） 
+		-->
+		<externalPorts_min> 20015 </externalPorts_min>					<!-- Type: Integer -->
+		<externalPorts_max> 20100 </externalPorts_max>					<!-- Type: Integer -->
 	</baseapp>
 	
 	<cellappmgr>
