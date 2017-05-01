@@ -40,7 +40,7 @@ class Spell:
 		
 		skill = skills.getSkill(skillID)
 		if skill is None:
-			ERROR_MSG("Spell::spellTarget(%i):skillID=%i not found" % (self.id, skillID))
+			#ERROR_MSG("Spell::spellTarget(%i):skillID=%i not found" % (self.id, skillID))
 			return
 
 		target = KBEngine.entities.get(targetID)
