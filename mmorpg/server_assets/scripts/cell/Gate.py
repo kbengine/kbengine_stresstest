@@ -80,7 +80,7 @@ class Gate(KBEngine.Entity, GameObject):
 				gotoSpaceUType = entityEntering.lastSpaceUType
 			
 			spaceData = d_spaces.datas.get(gotoSpaceUType)
-			entityEntering.teleportSpace(gotoSpaceUType, spaceData["spawnPos"], tuple(self.direction), {})
+			entityEntering.teleportSpace(gotoSpaceUType, spaceData["spawnPos"], tuple(self.direction), {"spaceKey" : entityEntering.spaceUType})
 
 	def onLeaveTrap(self, entityLeaving, range_xz, range_y, controllerID, userarg):
 		"""
