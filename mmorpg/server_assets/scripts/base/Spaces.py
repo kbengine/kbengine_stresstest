@@ -30,7 +30,7 @@ class Spaces(KBEngine.Base, GameObject):
 	def initAlloc(self):
 		# 注册一个定时器，在这个定时器中我们每个周期都创建出一些NPC，直到创建完所有
 		self._spaceAllocs = {}
-		self.addTimer(3, 0.1, SCDefine.TIMER_TYPE_CREATE_SPACES)
+		self.addTimer(3, 3, SCDefine.TIMER_TYPE_CREATE_SPACES)
 		
 		self._tmpDatas = list(d_spaces.datas.keys())
 		for utype in self._tmpDatas:
