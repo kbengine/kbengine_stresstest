@@ -76,6 +76,7 @@ class Gate(KBEngine.Entity, GameObject):
 		else:					 # cell-scene to 副本
 			if entityEntering.spaceUType > 1000 and entityEntering.spaceUType < 3000:
 				gotoSpaceUType = 3001
+				return
 			else:
 				gotoSpaceUType = entityEntering.lastSpaceUType
 			
