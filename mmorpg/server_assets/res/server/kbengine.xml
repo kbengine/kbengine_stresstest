@@ -141,9 +141,9 @@
 			tickCount	： 每次添加数量			(Each time you add the number of)
 		-->
 		<defaultAddBots> 
-			<totalCount> 50  </totalCount>								<!-- Type: Integer -->
+			<totalCount> 400  </totalCount>								<!-- Type: Integer -->
 			<tickTime> 0.1  </tickTime>									<!-- Type: Float -->
-			<tickCount> 5  </tickCount>									<!-- Type: Integer -->
+			<tickCount> 10  </tickCount>									<!-- Type: Integer -->
 		</defaultAddBots>
 	</bots>
 </root>
