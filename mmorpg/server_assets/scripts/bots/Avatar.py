@@ -85,6 +85,11 @@ class PlayerAvatar(Avatar):
 		当这个entity被引擎定义为角色时被调用
 		"""
 		DEBUG_MSG("%s::onBecomePlayer: %i" % (self.__class__.__name__, self.id))
+		
+		# 注意：由于PlayerAvatar是引擎底层强制由Avatar转换过来，__init__并不会再调用
+		# 这里手动进行初始化一下
+		self.__init__()
+		
 		KBEngine.callback(1, self.update)
 
 	def onEnterSpace(self):
