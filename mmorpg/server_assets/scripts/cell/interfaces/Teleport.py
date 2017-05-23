@@ -14,7 +14,12 @@ class Teleport:
 		"""
 		assert self.base != None
 		self.lastSpaceUType = self.spaceUType
-		self.getSpaces().teleportSpace(self.base, spaceUType, position, direction, SpaceContext.createContext(self, spaceUType))
+		
+		inputContext = SpaceContext.createContext(self, spaceUType)
+		if type(context) == dict:
+			inputContext.update(context)
+
+		self.getSpaces().teleportSpace(self.base, spaceUType, position, direction, inputContext)
 
 	#--------------------------------------------------------------------------------------------
 	#                              Callbacks
