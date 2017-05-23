@@ -44,7 +44,12 @@ class Teleport:
 					self.spaceUTypeB = spaceUType
 					self.cellData["spaceUType"] = spaceUType
 					self.cellData["position"] = spacedatas.get("spawnPos", (0,0,0))
-		
+			elif self.cellData["spaceUType"] == 3001:
+					self.spaceUTypeB = 1
+					self.cellData["spaceUType"] = 1
+					spacedatas = d_spaces.datas[self.spaceUTypeB]
+					self.cellData["position"] = spacedatas.get("spawnPos", (0,0,0))
+
 		KBEngine.globalData["Spaces"].loginToSpace(self, self.spaceUTypeB, {})
 
 
