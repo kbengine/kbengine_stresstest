@@ -65,13 +65,13 @@
 	
 	<cellapp>
 		<ids>
-			<criticallyLowSize> 1000 </criticallyLowSize>				<!-- Type: Integer -->
+			<criticallyLowSize> 2000 </criticallyLowSize>				<!-- Type: Integer -->
 		</ids>
 	</cellapp>
 	
 	<baseapp>
 		<ids>
-			<criticallyLowSize> 1000 </criticallyLowSize>				<!-- Type: Integer -->
+			<criticallyLowSize> 2000 </criticallyLowSize>				<!-- Type: Integer -->
 		</ids>
 		
 		<!-- 自动存档的时间周期(秒)
