@@ -57,12 +57,23 @@
 				<!-- <databaseName> kbe </databaseName> -->
 			</default>
 		</databaseInterfaces>
+		
+		<ids>
+			<increasing_range> 10000 </increasing_range>				<!-- Type: Integer -->
+		</ids>
 	</dbmgr>
 	
 	<cellapp>
+		<ids>
+			<criticallyLowSize> 1000 </criticallyLowSize>				<!-- Type: Integer -->
+		</ids>
 	</cellapp>
 	
 	<baseapp>
+		<ids>
+			<criticallyLowSize> 1000 </criticallyLowSize>				<!-- Type: Integer -->
+		</ids>
+		
 		<!-- 自动存档的时间周期(秒)
 			（Automatic archiving time period(secs)） 
 		-->
