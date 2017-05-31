@@ -47,4 +47,7 @@ class Teleport:
 		"""
 		entity销毁
 		"""
-		self.getSpaces().logoutSpace(self.id, self.getCurrSpaceBase().id)
+		try:
+			self.getSpaces().logoutSpace(self.id, self.getCurrSpaceBase().id)
+		except:
+			pass
