@@ -163,7 +163,7 @@ class PlayerAvatar(Avatar):
 					
 					if random.randint(0, 10) < 5:
 						# 本地传送
-						self.testTeleportPos = (-20.340378, 1.5, -150.070831)
+						self.testTeleportPos = (-81.340378, 1.5, -218.070831)
 					else:
 						# 跨场景传送
 						self.testTeleportPos = (-34.340378, 1.5, -121.070831)
