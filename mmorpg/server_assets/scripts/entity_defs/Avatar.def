@@ -8,7 +8,7 @@
 		<roll/>
 	</Volatile>
 
-	<Implements>
+	<Interfaces>
 		<Interface>	GameObject		</Interface>
 		<Interface>	State			</Interface>
 		<Interface>	Flags			</Interface>
@@ -18,7 +18,7 @@
 		<Interface>	Spell			</Interface>
 		<Interface>	Teleport		</Interface>
 		<Interface>	Dialog			</Interface>
-	</Implements>
+	</Interfaces>
 
 	<Properties>
 		<roleType>
@@ -39,7 +39,7 @@
 			<Type>	UNICODE					</Type>
 			<Flags>	ALL_CLIENTS					</Flags>
 			<Persistent>	true						</Persistent>
-			<Index> 	UNIQUE 					</Index> ÊôÐÔµÄË÷ÒýÀà±ð£¬UNIQUE, INDEX£¬·Ö±ð¶ÔÓ¦Î¨Ò»Ë÷Òý¡¢ÆÕÍ¨Ë÷Òý
+			<Index> 	UNIQUE 					</Index> ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½UNIQUE, INDEXï¿½ï¿½ï¿½Ö±ï¿½ï¿½Ó¦Î¨Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½
 			<DatabaseLength> 32						</DatabaseLength>
 		</playerName>
 		-->
