@@ -12,13 +12,13 @@ class SpaceCenter(Space):
 		self.avatars = {}
 		self.lastGateCount = 0
 
-	def onEnter(self, entityMailbox):
+	def onEnter(self, entityCall):
 		"""
 		defined method.
 		进入场景
 		"""
-		self.avatars[entityMailbox.id] = entityMailbox
-		Space.onEnter(self, entityMailbox)
+		self.avatars[entityCall.id] = entityCall
+		Space.onEnter(self, entityCall)
 		
 	def onLeave(self, entityID):
 		"""
