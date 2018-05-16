@@ -14,7 +14,7 @@
 
 	<BaseMethods>
 		<loginToSpace>
-			<Arg>		MAILBOX		</Arg>
+			<Arg>		ENTITYCALL		</Arg>
 			<Arg>		ENTITY_UTYPE	</Arg>
 			<Arg>		PYTHON		</Arg>
 		</loginToSpace>
@@ -25,7 +25,7 @@
 		</logoutSpace>
 
 		<teleportSpace>
-			<Arg>		MAILBOX		</Arg>
+			<Arg>		ENTITYCALL		</Arg>
 			<Arg>		ENTITY_UTYPE	</Arg>
 			<Arg>		POSITION3D	</Arg>
 			<Arg>		DIRECTION3D	</Arg>
@@ -39,7 +39,7 @@
 
 		<onSpaceGetCell>
 			<Arg>		ENTITY_UTYPE	</Arg>
-			<Arg>		MAILBOX		</Arg>
+			<Arg>		ENTITYCALL		</Arg>
 			<Arg>		DBID		</Arg>
 		</onSpaceGetCell>
 	</BaseMethods>

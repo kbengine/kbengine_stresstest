@@ -15,7 +15,7 @@
 		</spawnEntityNO>
 
 		<createToCell>
-			<Type>			MAILBOX			</Type>
+			<Type>			ENTITYCALL			</Type>
 			<Flags>			BASE			</Flags>
 			<Persistent>		true			</Persistent>
 		</createToCell>

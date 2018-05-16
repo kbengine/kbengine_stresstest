@@ -1,3 +1,0 @@
-[submodule "mmorpg/client_unity/Assets/Plugins/kbengine"]
-	path = mmorpg/client_unity/Assets/Plugins/kbengine
-	url = https://github.com/kbengine/kbengine_unity3d_plugins.git
