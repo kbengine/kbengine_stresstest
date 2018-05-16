@@ -31,27 +31,7 @@ http://www.kbengine.org
 		Installation(KBEngine):
 			http://www.kbengine.org/docs/installation.html
 
-	2. Use git to get the plugin(client) and demo-assets(server):
-
-		In the kbengine_unity3d_demo directory:
-
-		* Git command: git submodule update --init --remote
-![submodule_update1](http://www.kbengine.org/assets/img/screenshots/gitbash_submodule.png)
-
-		* Or use TortoiseGit(menu): TortoiseGit -> Submodule Update:
-![submodule_update2](http://www.kbengine.org/assets/img/screenshots/unity3d_plugins_submodule_update.jpg)
-
-		* Or manually get the plugin(client) and demo-assets(server)
-
-			Download plugin(client):
-				https://github.com/kbengine/kbengine_unity3d_plugins/releases/latest
-				unzip and copy to "Assets/plugins/kbengine/kbengine_unity3d_plugins"
-
-			Download demo-assets(server):
-				https://github.com/kbengine/kbengine_demos_assets/releases/latest
-				unzip and copy to "kbengine/"  (The root directory server engine, such as $KBE_ROOT)
-
-	3. Copy "kbengine_unity3d_demo\kbengine_demos_assets" to "kbengine\" root directory
+	2. Copy "kbengine_stresstest\mmorpg\server_assets" to "kbengine\" root directory
 ![demo_configure](http://www.kbengine.org/assets/img/screenshots/demo_copy_kbengine.jpg)
 
 
