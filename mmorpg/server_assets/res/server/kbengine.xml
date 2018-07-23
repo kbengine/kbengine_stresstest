@@ -87,8 +87,10 @@
 		<!-- 暴露给客户端的端口范围
 			（Exposed to the client port range） 
 		-->
-		<externalPorts_min> 20015 </externalPorts_min>					<!-- Type: Integer -->
-		<externalPorts_max> 20100 </externalPorts_max>					<!-- Type: Integer -->
+		<externalTcpPorts_min> 20015 </externalTcpPorts_min>			<!-- Type: Integer -->
+		<externalTcpPorts_max> 20019 </externalTcpPorts_max>			<!-- Type: Integer -->
+		<externalUdpPorts_min> 20005 </externalUdpPorts_min>			<!-- Type: Integer -->
+		<externalUdpPorts_max> 20009 </externalUdpPorts_max>			<!-- Type: Integer -->
 		
 		<!-- 强制指定外部IP地址或者域名，在某些网络环境下，可能会使用端口映射的方式来访问局域网内部的KBE服务器，那么KBE在当前
 			的机器上获得的外部地址是局域网地址，此时某些功能将会不正常。例如：账号激活邮件中给出的回调地址, 登录baseapp。
