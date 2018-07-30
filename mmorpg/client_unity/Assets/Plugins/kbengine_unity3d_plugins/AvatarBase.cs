@@ -74,6 +74,7 @@ namespace KBEngine
 				{
 					component1 = (TestBase)Activator.CreateInstance(entityComponentScript);
 					component1.owner = this;
+					component1.entityComponentPropertyID = 17;
 				}
 			}
 
@@ -87,6 +88,7 @@ namespace KBEngine
 				{
 					component2 = (TestBase)Activator.CreateInstance(entityComponentScript);
 					component2.owner = this;
+					component2.entityComponentPropertyID = 22;
 				}
 			}
 
@@ -100,6 +102,7 @@ namespace KBEngine
 				{
 					component3 = (TestNoBaseBase)Activator.CreateInstance(entityComponentScript);
 					component3.owner = this;
+					component3.entityComponentPropertyID = 23;
 				}
 			}
 

@@ -15,7 +15,17 @@ namespace KBEngine
 	// defined in */scripts/entity_defs/TestNoMethodProperty.def
 	public abstract class TestNoMethodPropertyBase : EntityComponent
 	{
+		public EntityBaseEntityCall_TestNoMethodPropertyBase baseEntityCall = null;
+		public EntityCellEntityCall_TestNoMethodPropertyBase cellEntityCall = null;
 
+
+
+		public override void createFromStream(MemoryStream stream)
+		{
+			base.createFromStream(stream);
+			baseEntityCall = new EntityBaseEntityCall_TestNoMethodPropertyBase(entityComponentPropertyID, ownerID);
+			cellEntityCall = new EntityCellEntityCall_TestNoMethodPropertyBase(entityComponentPropertyID, ownerID);
+		}
 
 		public override void onRemoteMethodCall(UInt16 methodUtype, MemoryStream stream)
 		{

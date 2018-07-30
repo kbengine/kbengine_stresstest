@@ -1449,6 +1449,7 @@ namespace KBEngine
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(NPC), property(utype / 41005).");
 
+			pNPCModule.useMethodDescrAlias = true;
 			ScriptModule pGateModule = new ScriptModule("Gate");
 			EntityDef.moduledefs["Gate"] = pGateModule;
 			EntityDef.idmoduledefs[8] = pGateModule;
@@ -1585,6 +1586,7 @@ namespace KBEngine
 
 			//Dbg.DEBUG_MSG("EntityDef::initScriptModules: add(Gate), property(utype / 41005).");
 
+			pGateModule.useMethodDescrAlias = true;
 		}
 
 		public static void initDefTypes()
