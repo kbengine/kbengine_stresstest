@@ -78,7 +78,7 @@
 		
 		// 服务端与客户端的版本号以及协议MD5
 		public string serverVersion = "";
-		public string clientVersion = "2.2.0";
+		public string clientVersion = "2.2.4";
 		public string serverScriptVersion = "";
 		public string clientScriptVersion = "0.1.0";
 		public string serverProtocolMD5 = "8FF92FA9E48B315853D352517E0BEC8F";
@@ -179,6 +179,9 @@
         {
         	Dbg.WARNING_MSG("KBEngine::destroy()");
         	
+			if(currserver == "baseapp")
+				logout();
+			
         	reset();
         	KBEngine.Event.deregisterIn(this);
         	resetMessages();
@@ -372,13 +375,29 @@
 		{
 			serverVersion = stream.readString();
 			serverScriptVersion = stream.readString();
-			serverProtocolMD5 = stream.readString();
-			serverEntitydefMD5 = stream.readString();
+			string currentServerProtocolMD5 = stream.readString();
+			string currentServerEntitydefMD5 = stream.readString();
 			Int32 ctype = stream.readInt32();
 			
 			Dbg.DEBUG_MSG("KBEngine::Client_onHelloCB: verInfo(" + serverVersion 
 				+ "), scriptVersion("+ serverScriptVersion + "), srvProtocolMD5("+ serverProtocolMD5 
 				+ "), srvEntitydefMD5("+ serverEntitydefMD5 + "), + ctype(" + ctype + ")!");
+			
+			/* 
+            if(serverProtocolMD5 != currentServerProtocolMD5)
+            {
+                Dbg.ERROR_MSG("Client_onHelloCB: digest not match! serverProtocolMD5=" + serverProtocolMD5 + "(server: " + currentServerProtocolMD5 + ")");
+                Event.fireAll("onVersionNotMatch", new object[] { clientVersion, serverVersion });
+                return;
+            }
+			*/
+			
+            if (serverEntitydefMD5 != currentServerEntitydefMD5)
+            {
+                Dbg.ERROR_MSG("Client_onHelloCB: digest not match! serverEntitydefMD5=" + serverEntitydefMD5 + "(server: " + currentServerEntitydefMD5 + ")");
+                Event.fireAll("onVersionNotMatch", new object[] { clientVersion, serverVersion });
+                return;
+            }
 			
 			onServerDigest();
 			
