@@ -152,6 +152,7 @@ public class World : MonoBehaviour
 		// 那么如果不设置renderObj的位置和方向将为0，人物会陷入地下
 		set_position(avatar);
 		set_direction(avatar);
+		set_entityName(avatar, avatar.name);
 	}
 
 	public void onAddSkill(KBEngine.Entity entity)
