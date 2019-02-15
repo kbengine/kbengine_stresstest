@@ -25,6 +25,7 @@
 		public delegate void ConnectCallback(string ip, int port, bool success, object userData);
 
 		protected Socket _socket = null;
+		protected EncryptionFilter _filter = null;
 		PacketReceiver _packetReceiver = null;
 		PacketSender _packetSender = null;
 
@@ -60,15 +61,19 @@
 		
 		public void reset()
 		{
-			if(valid())
-			{
-				Dbg.DEBUG_MSG(string.Format("NetworkInterface::reset(), close socket from '{0}'", _socket.RemoteEndPoint.ToString()));
-         	   _socket.Close(0);
-			}
-			_socket = null;
 			_packetReceiver = null;
 			_packetSender = null;
+			_filter = null;
 			connected = false;
+
+			if(_socket != null)
+			{
+				if(_socket.RemoteEndPoint != null)
+					Dbg.DEBUG_MSG(string.Format("NetworkInterface::reset(), close socket from '{0}'", _socket.RemoteEndPoint.ToString()));
+
+				_socket.Close(0);
+				_socket = null;
+			}
 		}
 		
 
@@ -78,7 +83,7 @@
 			{
 				_socket.Close(0);
 				_socket = null;
-				Event.fireAll("onDisconnected", new object[]{});
+				Event.fireAll(EventOutTypes.onDisconnected);
             }
 
             _socket = null;
@@ -113,7 +118,7 @@
 				Dbg.ERROR_MSG(string.Format("NetworkInterface::_onConnectionState(), connect error! ip: {0}:{1}, err: {2}", state.connectIP, state.connectPort, state.error));
 			}
 
-			Event.fireAll("onConnectionState", new object[] { success });
+			Event.fireAll(EventOutTypes.onConnectionState, success);
 
 			if (state.connectCB != null)
 				state.connectCB(state.connectIP, state.connectPort, success, state.userData);
@@ -219,7 +224,10 @@
 			if (_packetSender == null)
 				_packetSender = new PacketSender(this);
 
-			return _packetSender.send(stream);
+            if (_filter != null)
+                return _filter.send(_packetSender, stream);
+
+            return _packetSender.send(stream);
 		}
 
 		public void process()
@@ -230,5 +238,14 @@
 			if (_packetReceiver != null)
 				_packetReceiver.process();
 		}
-	}
+        public EncryptionFilter fileter()
+        {
+            return _filter;
+        }
+
+        public void setFilter(EncryptionFilter filter)
+        {
+            _filter = filter;
+        }
+    }
 }
