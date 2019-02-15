@@ -136,6 +136,20 @@ namespace KBEngine
 			return cellEntityCall;
 		}
 
+		public override void attachComponents()
+		{
+			component1.onAttached(this);
+			component2.onAttached(this);
+			component3.onAttached(this);
+		}
+
+		public override void detachComponents()
+		{
+			component1.onDetached(this);
+			component2.onDetached(this);
+			component3.onDetached(this);
+		}
+
 		public override void onRemoteMethodCall(MemoryStream stream)
 		{
 			ScriptModule sm = EntityDef.moduledefs["Avatar"];
@@ -143,14 +157,21 @@ namespace KBEngine
 			UInt16 methodUtype = 0;
 			UInt16 componentPropertyUType = 0;
 
-			if(sm.useMethodDescrAlias)
+			if(sm.usePropertyDescrAlias)
 			{
 				componentPropertyUType = stream.readUint8();
-				methodUtype = stream.readUint8();
 			}
 			else
 			{
 				componentPropertyUType = stream.readUint16();
+			}
+
+			if(sm.useMethodDescrAlias)
+			{
+				methodUtype = stream.readUint8();
+			}
+			else
+			{
 				methodUtype = stream.readUint16();
 			}
 

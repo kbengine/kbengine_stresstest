@@ -16,6 +16,22 @@ namespace KBEngine
 		public Int32 ownerID = 0;
 		public Entity owner = null;
 
+		public virtual void onAttached(Entity ownerEntity)
+		{
+
+		}
+
+		public virtual void onDetached(Entity ownerEntity)
+		{
+
+		}
+
+        public virtual ScriptModule getScriptModule()
+        {
+			// 动态生成
+            return null;
+        }
+
 		public virtual void onRemoteMethodCall(UInt16 methodUtype, MemoryStream stream)
 		{
 			// 动态生成

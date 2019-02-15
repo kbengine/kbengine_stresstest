@@ -27,6 +27,11 @@ namespace KBEngine
 			cellEntityCall = new EntityCellEntityCall_TestNoMethodPropertyBase(entityComponentPropertyID, ownerID);
 		}
 
+		public override ScriptModule getScriptModule()
+		{
+			return EntityDef.moduledefs["TestNoMethodProperty"];
+		}
+
 		public override void onRemoteMethodCall(UInt16 methodUtype, MemoryStream stream)
 		{
 			ScriptModule sm = EntityDef.moduledefs["TestNoMethodProperty"];
