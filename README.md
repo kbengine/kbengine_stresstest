@@ -9,7 +9,11 @@
   3：根据系统的核数配置适当的cellapp、baseapp进程的数量， 通常一核占用一个进程最好
   
   4: 启动服务器后等待服务器定时将所有场景创建完毕之后才可以进入游戏
+  
+  5: bots进程最好在另外一台机器上开启， 每个bots进程的虚拟客户端数量最好不要太多kbengine.xml->defaultAddBots->totalCount，例如配置为50， 需要测试多少人就缓慢多启动一点bots进程
 
+  6: 条件满足的话dbmgr、cellappmgr、baseappmgr、logger以及mysql最好不要和baseapp、cellapp放在一台硬件上
+  
 --------------------------------------------------------------------------------------------
 
 Video: http://v.youku.com/v_show/id_XMjgyMjM0MTYwNA==.html?spm=a2h3j.8428770.3416059.1
