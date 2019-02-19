@@ -10,6 +10,7 @@
   
   4: 启动服务器后等待服务器定时将所有场景创建完毕之后才可以进入游戏
 
+--------------------------------------------------------------------------------------------
 
 Video: http://v.youku.com/v_show/id_XMjgyMjM0MTYwNA==.html?spm=a2h3j.8428770.3416059.1
 ![screenshots1](https://github.com/kbengine/kbengine_stresstest/blob/master/screenshots/stresstest_mmorpg3.jpg)
