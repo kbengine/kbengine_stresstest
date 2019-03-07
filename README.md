@@ -14,6 +14,8 @@
 
   6: 条件满足的话dbmgr、cellappmgr、baseappmgr、logger以及mysql最好不要和baseapp、cellapp放在一台硬件上
   
+  7：使用print_servers.sh输出服务器当前信息， clients代表当前客户端连接数。
+
 --------------------------------------------------------------------------------------------
 
 Video: http://v.youku.com/v_show/id_XMjgyMjM0MTYwNA==.html?spm=a2h3j.8428770.3416059.1
